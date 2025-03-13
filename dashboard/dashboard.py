@@ -29,7 +29,7 @@ def create_monthly_rentals_df (df) :
     return monthly_rentals_df
 
 # Load Data yang sudah diproses
-all_df = pd.read_csv("https://github.com/rahmat-ama/proyek-analisis-data/blob/a6208b66bdf37277a955dd685b50d02a565b8a17/dashboard/all_data.csv")
+all_df = pd.read_csv("https://github.com/rahmat-ama/proyek-analisis-data/blob/main/dashboard/all_data.csv")
 
 all_df.sort_values(by='dteday', inplace=True)
 all_df.reset_index(inplace=True)
