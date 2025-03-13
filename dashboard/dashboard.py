@@ -2,6 +2,7 @@ import pandas as pd
 from matplotlib import pyplot as plt
 import seaborn as sns
 import streamlit as st
+import os
 sns.set(style='dark')
 
 # Helper function untuk berbagai DataFrame
@@ -29,7 +30,8 @@ def create_monthly_rentals_df (df) :
     return monthly_rentals_df
 
 # Load Data yang sudah diproses
-all_df = pd.read_csv("https://github.com/rahmat-ama/proyek-analisis-data/blob/main/dashboard/all_data.csv")
+path_file = os.path.join(os.path.dirname(__file__), "all_data.csv")
+all_df = pd.read_csv(path_file)
 
 all_df.sort_values(by='dteday', inplace=True)
 all_df.reset_index(inplace=True)
